@@ -1,0 +1,16 @@
+# Internal Admin Tools
+batch_ingest.py
+ingestion.log
+
+# Environment & Secrets
+.env
+.env.local
+
+# Virtual Environments
+venv/
+env/
+.venv/
+.vscode/
+# Python Cache
+__pycache__/
+*.pyc

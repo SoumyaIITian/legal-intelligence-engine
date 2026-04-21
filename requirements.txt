@@ -1,0 +1,24 @@
+# --- Backend (API & Server) ---
+fastapi==0.110.1
+uvicorn==0.29.0
+pydantic==2.6.4
+
+# --- Frontend ---
+streamlit==1.32.2
+requests==2.31.0
+
+# --- AI & Vector Database (LangChain Ecosystem) ---
+langchain-core==0.1.40
+langchain-groq==0.1.2
+langchain-pinecone==0.1.0
+langchain-huggingface==0.0.1
+pinecone-client==3.2.2
+
+# --- Data Ingestion & Scraping ---
+langchain-community==0.0.31
+langchain-text-splitters==0.0.1
+beautifulsoup4==4.12.3
+lxml==5.2.1
+
+# --- Utilities ---
+python-dotenv==1.0.1
