@@ -46,6 +46,11 @@ def get_vector_store(client_id: str):
 def format_docs(docs):
     return "\n\n".join([doc.page_content for doc in docs])
 
+# --- Health Check Endpoint ---
+@app.get("/health")
+async def health_check():
+    return {"status": "awake"}
+
 # --- Endpoints ---
 @app.post("/api/v1/{client_id}/query")
 async def query_data(client_id: str, request: QueryRequest):
