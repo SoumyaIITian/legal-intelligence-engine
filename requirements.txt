@@ -7,16 +7,12 @@ pydantic==2.6.4
 streamlit==1.32.2
 requests==2.31.0
 
-# --- AI & Vector Database (Unpinned for automatic resolution) ---
+# --- Core AI & Vector Database (Inference Only) ---
 langchain-core
 langchain-groq
 langchain-pinecone
 langchain-huggingface
 pinecone-client
-langchain-community
-langchain-text-splitters
 
-# --- Data Ingestion & Utilities ---
-beautifulsoup4==4.12.3
-lxml==5.2.1
+# --- Utilities ---
 python-dotenv==1.0.1
