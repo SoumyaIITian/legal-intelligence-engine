@@ -11,7 +11,7 @@ requests==2.31.0
 langchain-core
 langchain-groq
 langchain-pinecone
-langchain-huggingface
+langchain-community
 pinecone-client
 
 # --- Utilities ---
