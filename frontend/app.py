@@ -62,7 +62,8 @@ if user_query := st.chat_input("Ask a specific operational question..."):
                 message_placeholder.markdown(answer)
                 st.session_state.messages.append({"role": "assistant", "content": answer})
             else:
-                message_placeholder.error("System error. Please try again.")
+                # Unmask the error for debugging
+                message_placeholder.error(f"Backend Error: {response.text}")
                 
         except Exception as e:
             message_placeholder.error("Connection Error. Ensure backend is running.")
