@@ -3,7 +3,7 @@ from typing import List
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from dotenv import load_dotenv
-from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_huggingface import HuggingFaceEndpointEmbeddings
 from langchain_pinecone import PineconeVectorStore
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
@@ -15,9 +15,10 @@ load_dotenv()
 
 app = FastAPI(title="Multi-Tenant RAG Inference API")
 
-embeddings = HuggingFaceEmbeddings(
-    model_name="nomic-ai/nomic-embed-text-v1.5", 
-    model_kwargs={'trust_remote_code': True}
+embeddings = HuggingFaceEndpointEmbeddings(
+    model="nomic-ai/nomic-embed-text-v1.5",
+    task="feature-extraction",
+    huggingfacehub_api_token=os.environ.get("HF_TOKEN")
 )
 
 llm = ChatGroq(
